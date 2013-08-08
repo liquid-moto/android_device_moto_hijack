@@ -1,0 +1,20 @@
+This is the Motorola Common section.
+
+HijackedBootmenu is included here for ICS under the hijack/ folder.
+
+Extras that need to be done:
+
+******************************************************
+*** Update the project to pull from Wizard0f0s git ***
+******************************************************
+
+At the base of your build, change to the .repo directory (cd .repo).
+Edit the manifest.xml file.  File the line that points to "CyanogenMod/android_device_moto_hijack" (without quotes).
+Replace the "CyanogenMod" portion with "wizard0f0s" (the 0's are zeros, not o's).  Change back to the base of your repo.
+Run "repo sync" to pull down the new git source.
+
+***********************************
+*** Shadow Modifications **********
+***********************************
+
+Shadow needs to be modified to include the proper permission settings.
