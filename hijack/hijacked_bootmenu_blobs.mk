@@ -1,6 +1,6 @@
 # Required tools and blobs for hijackedBootmenu
 
-hijack_root = device/motorola/common/hijack/bootmenu
+hijack_root = device/motorola/hijack/hijack/bootmenu
 
 # binary
 PRODUCT_COPY_FILES += \
