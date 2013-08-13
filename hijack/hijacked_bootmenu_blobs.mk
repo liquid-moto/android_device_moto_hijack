@@ -1,9 +1,9 @@
 # Required tools and blobs for hijackedBootmenu
 
-hijack_root = device/motorola/common/hijack/bootmenu
+hijack_root = device/motorola/hijack/hijack/bootmenu
 
 # binary
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/binary/adbd:system/bootmenu/binary/adbd \
    ${hijack_root}/binary/adbd.root:system/bootmenu/binary/adbd.root \
    ${hijack_root}/binary/busybox:system/bootmenu/binary/busybox \
@@ -11,17 +11,17 @@ PRODUCT_COPY_FILES += \
    ${hijack_root}/binary/recovery:system/bootmenu/binary/recovery \
 
 # config
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/config/nvs_map_commands.txt:system/bootmenu/config/nvs_map_commands.txt \
    ${hijack_root}/config/overclock.conf:system/bootmenu/config/overclock.conf \
 
 # Fixes
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/fixes/09multitouch-2pt:system/bootmenu/fixes/09multitouch-2pt \
    ${hijack_root}/fixes/09multitouch-8pt:system/bootmenu/fixes/09multitouch-8pt \
 
 # images
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/images/background.png:system/bootmenu/images/background.png \
    ${hijack_root}/images/indeterminate1.png:system/bootmenu/images/indeterminate1.png \
    ${hijack_root}/images/indeterminate2.png:system/bootmenu/images/indeterminate2.png \
@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
    ${hijack_root}/images/progress_fill.png:system/bootmenu/images/progress_fill.png \
 
 # modules
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/modules/cpufreq_conservative.ko:system/lib/modules/cpufreq_conservative.ko \
    ${hijack_root}/modules/cpufreq_interactive.ko:system/lib/modules/cpufreq_interactive.ko \
    ${hijack_root}/modules/cpufreq_interactivex.ko:system/lib/modules/cpufreq_interactivex.ko \
@@ -52,14 +52,14 @@ PRODUCT_COPY_FILES += \
    ${hijack_root}/modules/symsearch.ko:system/lib/modules/symsearch.ko \
 
 # recovery
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/recovery/cwm-recovery.zip:system/bootmenu/recovery/cwm-recovery.zip \
    ${hijack_root}/recovery/recovery.zip:system/bootmenu/recovery/recovery.zip \
    ${hijack_root}/recovery/rzr-recovery.zip:system/bootmenu/recovery/rzr-recovery.zip \
    ${hijack_root}/recovery/update-binary:system/bootmenu/recovery/update-binary \
 
 # script
-PRODUCT_COPY_FILES += \
+BUILT_PREBUILD += \
    ${hijack_root}/script/adbd.sh:system/bootmenu/script/adbd.sh \
    ${hijack_root}/script/cdrom.sh:system/bootmenu/script/cdrom.sh \
    ${hijack_root}/script/_config.sh:system/bootmenu/script/_config.sh \
